@@ -51,7 +51,15 @@ with tab1:
         international = st.selectbox("International payment?", ["No", "Yes"])
         late_night = st.selectbox("Late night transaction?", ["No", "Yes"])
         new_device = st.selectbox("New device used?", ["No", "Yes"])
+        
+    submit_transaction = st.button(
+        "Submit Payment",
+        type="primary",
+        use_container_width=True
+    )
 
+    if submit_transaction:
+        st.success("Payment submitted successfully. AI fraud analysis started.")
     st.write("### Customer Action")
     st.write("Customer submits a payment through NAB digital banking.")
 
